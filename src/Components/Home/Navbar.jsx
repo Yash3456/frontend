@@ -23,7 +23,7 @@ const Navbar = () => {
         {
             navData.map(data=>{
             return (
-            <Container2>
+            <Container2 >
             <img src={data.url} alt="nav" style={{width:64}}/>
             <Texted>{data.text}</Texted>
             </Container2>

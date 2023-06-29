@@ -1,7 +1,10 @@
 import styled from '@emotion/styled'
 import { Box, Button, Dialog, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import { authenticateLogin} from '../../Service/api'
+import {authenticateLogin, authenticateSignup} from '../../Service/api'
+import { useContext } from 'react'
+import { Datacontext } from '../../Context/Dataprovider'
+import swal from "sweetalert";
 
 const Textlabel = styled(Box)`
  height:70vh;
@@ -73,6 +76,14 @@ signup: {
 }
 }
 
+const Error = styled(Typography)`
+font-size:10px;
+color:#ff6161;
+line-height:0;
+margin-top:10px;
+font-weight:600;
+`
+
 const signupInitialValues = {
   firstname: '',
   lastname: '',
@@ -82,14 +93,23 @@ const signupInitialValues = {
   phone: ''
 };
 
+const loginintialvlues = {
+ username:'',
+ password:''
+};
+
 const LoginDialogue = ({open,setopen}) => {
 
-const [account,toggleacount] = useState(accountloginview.login)
+const [Account,toggleacount] = useState(accountloginview.login)
 const [signup,setsignp] = useState(signupInitialValues);
+const [account,setaccount] = useContext(Datacontext);
+const [login,setlogin] = useState(loginintialvlues);
+const [alert,setalert] = useState(false);
 
 const handleclose = () =>{
  setopen(false);
- toggleacount(accountloginview.login);  
+ toggleacount(accountloginview.login);
+ setalert(false); 
 }
 
 const inputchange = (e) =>{
@@ -97,7 +117,26 @@ const inputchange = (e) =>{
 }
 
 const signinfunc = async () =>{
-  let response = await authenticateLogin(signup);
+  let response = await authenticateSignup(signup);
+ if(!response) return;
+ handleclose();
+ setaccount(signup.firstname);
+}
+
+const valuechange = (e) =>{
+ setlogin({...login,[e.target.name]:e.target.value});
+}
+
+const logintest =async ()=>{
+   let response = await authenticateLogin(login);
+  console.log(response);
+  if(response.status===200){
+    handleclose();
+    setaccount(response.data.data.firstname);  
+  }else{
+    setalert(true);
+  }
+
 }
 
   return (
@@ -105,16 +144,17 @@ const signinfunc = async () =>{
      <Textlabel>
       <Box style={{display:"flex",height:"100%"}}>
       <Imagebox>
-    <Typography variant='h5'>{account.heading}</Typography>
-    <Typography style={{marginTop:20}}>{account.subHeading}</Typography>
+    <Typography variant='h5'>{Account.heading}</Typography>
+    <Typography style={{marginTop:20}}>{Account.subHeading}</Typography>
       </Imagebox>
 {
-  account.view === 'login'?
+  Account.view === 'login'?
   <Wrapper>
-  <TextField variant="standard" label="Enter Email/Phone Number..."/>
-  <TextField variant="standard" label="Enter Password..."/>
+  <TextField variant="standard" onChange={(e)=>valuechange(e)} name='username' label="Enter Username...."/>
+   {alert && <Error>Enter valid Username or Password</Error>}
+  <TextField variant="standard" onChange={(e)=> valuechange(e)} name='password' label="Enter Password..."/>
   <Text>by continuing, you agree with flipkart terms and conditions.</Text>
-  <LoginButton>Login</LoginButton>
+  <LoginButton onClick={()=> logintest()}>Login</LoginButton>
   <Typography style={{textAlign:'center'}}>OR</Typography>
   <RequestOTP>Request for OTP</RequestOTP>
   <CreateAaccout onClick={()=> toggleacount(accountloginview.signup)}>New to Flipkart? Create an Account.</CreateAaccout>
