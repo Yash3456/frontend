@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import {Box, Button, Divider, Typography} from "@mui/material";
 import styled from '@emotion/styled';
 import Countdown from 'react-countdown';
+import { Link } from 'react-router-dom';
 
 const responsive = {
     desktop: {
@@ -23,6 +24,10 @@ const responsive = {
 const Component = styled(Box)`
 margin-top:10px;
 background:#ffffff;
+margin-left:2px;
+margin-right:2px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+border-radius:3px;
 `
 const Deal = styled(Box)`
  padding:15px 20px;
@@ -63,10 +68,6 @@ const Slider = ({data,title,timer}) => {
 
   const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
 
- const rendered = ({hours,minutes,seconds}) =>{
- return <Box variant="span">{hours} : {minutes} : {seconds} Left</Box>;
- }
-
   return (
     <Component>   
   <Deal>
@@ -74,7 +75,7 @@ const Slider = ({data,title,timer}) => {
  {
   timer && <Timer>
   <img src={timerURL} alt="timeerlogo"/>
-  <Countdown date={Date.now() + 5.04e+7} renderer={rendered} />
+   <Box variant="span">&nbsp;&nbsp;Deal is Live Now</Box>
  </Timer>
  }
 <Viewbutton variant='contained' color='primary'>View all</Viewbutton>
@@ -96,12 +97,15 @@ const Slider = ({data,title,timer}) => {
     >
    {
     data.map(entry=>(
+      
+      <Link to={`product/${entry.id}`} style={{textDecoration:"none"}}>
       <Box textAlign="center" style={{padding:"25px 15px"}}>
       <Image src={entry.url} alt="products"/>
       <Text style={{fontWeight:600, color:"#212121"}}>{entry.title.shortTitle}</Text>
       <Text style={{color:"green"}}>{entry.discount}</Text>
       <Text style={{color:"#e53935", opacity:"0.8"}}>{entry.tagline}</Text>
       </Box>  
+      </Link>
   ))
   }
     </Carousel>

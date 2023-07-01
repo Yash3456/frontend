@@ -6,6 +6,8 @@ import styled from '@emotion/styled'
 import { useDispatch, useSelector } from 'react-redux'
 import { Getproducts } from '../../redux/actions/Productaction'
 import Slider from './Slider'
+import MidSlide from '../Header/MidSlide'
+import Midsection from '../Header/Midsection'
 
 const boxcomponent = styled(Box)`
 padding:10px;
@@ -15,8 +17,6 @@ background:"#F2F2F2";
 const Home = () => {
 
 const {products} = useSelector(state => state.getproducts);
-console.log(products);
-
  const dispatch = useDispatch();
 
  useEffect(()=>{
@@ -25,10 +25,11 @@ console.log(products);
 
   return (
 <> 
-<Navbar/>
+<Navbar/> 
 <Box>
 <Banner/>
-<Slider data={products} title="Deal of the Day" timer={true}/>
+<MidSlide data={products} title="Deal of the Day" timer={true}/>
+<Midsection/>
 <Slider data={products} title="Discount for You" timer={false}/>
 <Slider data={products} title="Suggested Items" timer={false}/>
 <Slider data={products} title="Top Selected Items" timer={false}/>

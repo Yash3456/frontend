@@ -2,11 +2,16 @@ import { Box,Typography,styled } from '@mui/material'
 import React from 'react'
 import { navData } from '../../Constraints/Data'
 
-const Container1 = styled(Box)`
-display:flex;
-margin:55px 130px 0 130px;
-justify-content:space-between;
-`
+const Container1 = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  margin: '55px 130px 0 130px !important',
+  overflowX: 'overlay',
+  background:"#fff",
+  [theme.breakpoints.down('lg')]: {
+      margin: '0px !important'
+  }
+}))
 const Container2 = styled(Box)`
 padding:12px 8px;
 text-align:center;
