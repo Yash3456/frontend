@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { DetailURL } from '../../Constraints/Data'
 import styled from '@emotion/styled'
 import { ShoppingCart as Cart, FlashOn as Flash } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import {useDispatch} from "react-redux";
 import { Addtocart } from '../../redux/actions/cartaction';
+import swal from "sweetalert";
+
 
 const Container = styled(Box)`
 min-width: 40%;
@@ -58,7 +60,7 @@ const width = window.innerWidth;
       findurl();
    },[])
 
-  const navigate = useNavigate(); 
+  // const navigate = useNavigate(); 
  const dispatch = useDispatch();
 
  const {id} = product;
@@ -66,8 +68,9 @@ const width = window.innerWidth;
  const [qunatity,setqunatity] = useState(1);
 
  const addtocart = ()=>{
+  swal("","Item added Successfully","success");
   dispatch(Addtocart(id,qunatity));
-  navigate("/cart");
+  // navigate("/cart");
  }
 
   return (

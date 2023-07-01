@@ -8,6 +8,8 @@ import {useParams} from "react-router-dom";
 import { Addtocart, IncreaseCount, Removefroomcart } from '../../redux/actions/cartaction';
 import EmptyCart from './EmptyCart';
 import "../../App.css";
+import swal from "sweetalert";
+
 
 const Header = styled(Box)`
 padding:15px 24px;

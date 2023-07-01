@@ -132,11 +132,11 @@ const logintest =async ()=>{
   console.log(response);
   if(response.status===200){
     handleclose();
-    setaccount(response.data.data.firstname);  
-  }else{
+    setaccount(response.data.data.firstname);
+    }else{
     setalert(true);
+    swal("Oops!", "Something went wrong!", "error");
   }
-
 }
 
   return (
@@ -179,3 +179,15 @@ const logintest =async ()=>{
 }
 
 export default LoginDialogue
+
+// swal({
+//   title: "Are you sure?",
+//   text: "Are you sure that you want to leave this page?",
+//   icon: "warning",
+//   dangerMode: true,
+// })
+// .then(willDelete => {
+//   if (willDelete) {
+//     swal("Deleted!", "Your imaginary file has been deleted!", "success");
+//   }
+// });

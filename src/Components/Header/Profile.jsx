@@ -4,6 +4,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import React, { useState } from 'react'
 import {PowerSettingsNew} from "@mui/icons-material";
+import swal from 'sweetalert';
 
 const Component = styled(Menu)`
 margin-top:5px;
@@ -31,6 +32,22 @@ const Profile = ({account,setaccount}) => {
 setaccount("");
  }
 
+ const confirmation = ()=>{
+  swal({
+    title: "Are you sure?",
+    text: "Are you sure that you want to leave this page?",
+    icon: "warning",
+    dangerMode: true,
+  })
+  .then(willDelete => {
+    if (willDelete) {
+      swal("Logged Out!", "You have Successfully logged out", "success");
+      handleClose();
+  logout();
+    }
+  });
+ }
+
   return (
     <>
     <Box>
@@ -40,7 +57,7 @@ setaccount("");
         open={Boolean(state)}
         onClose={handleClose}
       >
-        <MenuItem onClick={()=> { handleClose(); logout();}}>
+        <MenuItem onClick={()=> confirmation()}>
         <PowerSettingsNew color='primary' fontSize='small'/>
         <Logout>Logout</Logout>
         </MenuItem>
@@ -51,3 +68,7 @@ setaccount("");
 }
 
 export default Profile
+
+// rzp_test_ZuggJ8zHrbU3nW keyid
+
+// rzp_test_ZuggJ8zHrbU3nW keysecret
