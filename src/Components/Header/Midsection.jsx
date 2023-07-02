@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
 import { imageURL } from '../../Constraints/Data'
 import styled from '@emotion/styled'

@@ -5,6 +5,8 @@ import { Box } from '@mui/material';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Detailsview from './Components/Details/Detailsview';
 import Cart from './Components/Cart/Cart';
+import ContactUs from './Components/Contactus/ContactUs';
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
      <Routes>
      <Route path='/' element={<Home/>} />
      <Route path='/cart' element={<Cart/>} />
+     <Route path='/contact' element={<ContactUs/>}/>
      <Route path='/product/:id' element={<Detailsview/>} />
      </Routes>
      </Box>
+     <Footer/>
      </BrowserRouter>
     </div>
   );

@@ -64,8 +64,8 @@ const Customerbutton = () => {
                 <Loginbutton variant="contained" onClick={() => setopen(true)}>Login</Loginbutton>
                 )
             }
-        <Typography style={{marginTop:3,width:135}}>Become a Seller</Typography>
-        <Typography style={{marginTop:3,width:50}}>More</Typography>
+        <Typography style={{marginTop:3,width:35}}>Store</Typography>
+       <Link to={"/contact"} style={{textDecoration:"none",color:"inherit"}}> <Typography style={{marginTop:3,width:120}}>Contact Us</Typography></Link>
           <Link to={"/cart"} style={{textDecoration:"none",color:"inherit"}}><Contain>
             <Badge badgeContent={cartItems?.length} color="secondary">
             <ShoppingcartIcon/>

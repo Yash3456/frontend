@@ -24,7 +24,6 @@ const Banner = () => {
 
 useEffect(()=>{
   const height = window.innerWidth;
-  const width = window.innerHeight;
   if(height <= 900){
     setheight(150);
   }

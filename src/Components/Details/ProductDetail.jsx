@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box,Table,TableBody,TableCell,TableRow,Typography } from '@mui/material'
-import { LocalOffer as Badge, LocalOffer } from '@mui/icons-material';
+import { LocalOffer as Badge} from '@mui/icons-material';
 import styled from '@emotion/styled';
 import SecurityIcon from '@mui/icons-material/Security';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';

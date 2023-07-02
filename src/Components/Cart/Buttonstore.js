@@ -1,6 +1,5 @@
-import {ButtonGroup, Box, Button,styled } from '@mui/material'
+import {ButtonGroup, Button,styled } from '@mui/material'
 import React, { useState } from 'react'
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
 
 const Component = styled(ButtonGroup)`
     margin-top: 30px;

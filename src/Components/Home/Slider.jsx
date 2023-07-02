@@ -72,12 +72,6 @@ const Slider = ({data,title,timer}) => {
     <Component>   
   <Deal>
  <Dealtext>{title}</Dealtext>
- {
-  timer && <Timer>
-  <img src={timerURL} alt="timeerlogo"/>
-   <Box variant="span">&nbsp;&nbsp;Deal is Live Now</Box>
- </Timer>
- }
 <Viewbutton variant='contained' color='primary'>View all</Viewbutton>
   </Deal>
   <Divider/>    

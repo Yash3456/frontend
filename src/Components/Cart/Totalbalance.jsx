@@ -30,10 +30,6 @@ const Totalbalance = ({number,cartdata}) => {
  const [price,setPrice] = useState(0);
  const [discount,setDiscount] = useState(0);
 
- useEffect(()=>{
-   totalAmount();
- },[cartdata]);
-
  const totalAmount = () => {
   let price = 0, discount = 0;
   cartdata.map(item => {
@@ -46,6 +42,12 @@ const Totalbalance = ({number,cartdata}) => {
   setPrice(price);
   setDiscount(discount);
 }
+
+
+useEffect(()=>{
+  totalAmount();
+},[cartdata]);
+
 
   return (
     <Box>

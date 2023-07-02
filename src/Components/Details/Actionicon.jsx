@@ -33,7 +33,8 @@ const Actionicon = ({product}) => {
     DetailURL.map(data=>{
      if(data.id === product.id){
       seturl(data.detailUrl);
-     }
+     return ; 
+    }
     })
    }
    
