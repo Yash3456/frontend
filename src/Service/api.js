@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'https://mernstack-three.vercel.app/';
+const url = 'http://localhost:8000';
 
 export const authenticateSignup = async (user) => {
     try {
