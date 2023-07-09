@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import {Box, Button, Divider, Typography} from "@mui/material";
 import styled from '@emotion/styled';
 import Countdown from 'react-countdown';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const responsive = {
     desktop: {
@@ -65,14 +65,13 @@ margin-top:5px;
 `
 
 const Slider = ({data,title,timer}) => {
-
-  const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
+ const navi = useNavigate();
 
   return (
     <Component>   
   <Deal>
  <Dealtext>{title}</Dealtext>
-<Viewbutton variant='contained' color='primary'>View all</Viewbutton>
+<Viewbutton variant='contained' color='primary' onClick={()=>{navi("/store")}}>View all</Viewbutton>
   </Deal>
   <Divider/>    
     <Carousel

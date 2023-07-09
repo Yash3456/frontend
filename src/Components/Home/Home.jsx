@@ -25,7 +25,7 @@ const {products} = useSelector(state => state.getproducts);
 
   return (
 <> 
-<Navbar/> 
+ 
 <Box>
 <Banner/>
 <MidSlide data={products} title="Deal of the Day" timer={true}/>

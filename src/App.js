@@ -7,6 +7,7 @@ import Detailsview from './Components/Details/Detailsview';
 import Cart from './Components/Cart/Cart';
 import ContactUs from './Components/Contactus/ContactUs';
 import Footer from "./Components/Footer/Footer";
+import Store from './Components/Store/Store';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
      <Box style={{marginTop: 55}}>
      <Routes>
      <Route path='/' element={<Home/>} />
-     <Route path='/cart' element={<Cart/>} />
+     <Route path='/store' element={<Store/>} />
      <Route path='/contact' element={<ContactUs/>}/>
      <Route path='/product/:id' element={<Detailsview/>} />
+     <Route path='/cart' element={<Cart/>} />
      </Routes>
      </Box>
      <Footer/>
