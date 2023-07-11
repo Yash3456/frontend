@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as actiontypes from "../constants/productconstants.js";
 
-const URL = 'http://localhost:8000';
+const url = 'http://localhost:8000';
 
 export const Getproducts =()=> async(dispatch)=>{
     try {
