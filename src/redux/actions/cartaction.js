@@ -1,7 +1,7 @@
 import axios from "axios"; 
 import * as actiontype from "../constants/cartconstants";
 
-const url = 'https://bakend-xi.vercel.app';
+const URL = 'https://bakend-xi.vercel.app';
 
 export const Addtocart= (id, quantity) => async (dispatch) => {
  try {

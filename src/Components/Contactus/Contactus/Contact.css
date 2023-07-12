@@ -1,0 +1,215 @@
+ .mainbody{
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 35px;
+}
+.c-header-container{
+    display: flex;
+    justify-content: space-around;
+}
+.c-image-container{
+    width: 20%;
+    height: 52vh;
+}
+.c-header-container img{
+    width: 100%;
+    height: 100%;
+}
+.c_heading{
+    /* height: 40%; */
+    margin-top: 25px;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 0.8rem;
+}
+.mainbody .orangeText{
+    font-size: 2.3rem;
+}
+.mainbody h5{
+    font-size: 0.8em;
+}
+.c_heading p{
+    font-weight: 700;
+}
+
+.c_form{
+    height: 60%;
+    width: 100%;
+    padding: 2% 2%;
+}
+
+.card1{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carddesign{
+    width: 22%;
+    min-width: 271px;
+    height:39vh;
+    border-radius: 7px;
+    box-shadow: 1px 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+
+.upper-carddesign{
+    height: 37%;
+    background:  linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+    border-radius: 7px;
+    position: relative;
+}
+
+.design-image{
+    position: absolute;
+    bottom: -20%;
+    left: 37%;
+    background-color: rgb(192,192,192);
+    /* background-color: orange; */
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: #009688;
+    border: 3px solid var(--blue);
+}
+.upper-carddesign p{
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    font-weight: 800;
+}
+.lower-carddesign{
+    height: 60%;
+    position: relative;
+}
+.lower-carddesign .button{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+}
+.cardText{
+    position: absolute;
+    top: 14%;
+    width: 100%;
+    text-align: center;
+}
+.cardText p{
+    font-size: 0.8rem;
+    
+}
+.cardText .orangeText{
+    font-size: 1.1rem;
+}
+.mediaIcons-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-mediaIcons{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.8rem;
+    /* background-color: #009688; */
+    /* margin-bottom: 0.1rem; */
+    width: 80%;
+    padding: 0.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.mediaIcons-div>:last-child{
+    border: 0;
+}
+
+.formbody{
+    width: 100%;
+}
+.formbody .orangeText{
+    margin-bottom: 25px;
+}
+.react-responsive-modal-modal {
+    background-color: rgba(0,0,0,0.8);
+    width: 80%;
+    padding: 1.8rem;
+}
+.input1{
+    display: flex;
+    flex-direction: column;
+}
+.react-responsive-modal-closeButton {
+    color: wheat;
+    background-color: white;
+    border-radius: 6px;
+}
+.input1 .name{
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
+}
+.input1 .email{
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
+}
+.message{
+    width: 100%;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    padding: 0.4rem;
+    outline: none;
+    border-radius: 8px;
+}
+
+.contact-user{
+    
+    border-radius: 50%;
+    border: 2px solid rgb(192,192,192);
+    width: 100px;
+    height: 100px;
+    padding: .2rem;
+    margin-left: 45%;
+}
+.footer-heading{
+    padding: 0.8rem;
+}
+@media (max-width:720px) {
+    .mainbody .orangeText {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .c_heading .secondaryText{
+        font-size: 1.2rem;
+    }
+    .c_heading p{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width:520px) {
+    .mainbody .orangeText {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .c_heading .secondaryText{
+        font-size: 0.8rem;
+    }
+    .c_heading p{
+        font-size: 1.0rem;
+    }
+}

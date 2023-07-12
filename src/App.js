@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Detailsview from './Components/Details/Detailsview';
 import Cart from './Components/Cart/Cart';
-import ContactUs from './Components/Contactus/ContactUs';
+import ContactUs from './Components/Contactus/Contactus/ContactUs';
 import Footer from "./Components/Footer/Footer";
 import Store from './Components/Store/Store';
 
