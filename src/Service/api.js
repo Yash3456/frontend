@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'http://localhost:8000';
+const url = 'https://bakend-xi.vercel.app';
 
 export const authenticateSignup = async (user) => {
     try {

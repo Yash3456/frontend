@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as actiontypes from "../constants/productconstants.js";
 
-const url = 'http://localhost:8000';
+const url = 'https://bakend-xi.vercel.app';
 
 export const Getproducts =()=> async(dispatch)=>{
     try {
