@@ -64,13 +64,13 @@ const Customerbutton = () => {
                 <Loginbutton variant="contained" onClick={() => setopen(true)}>Login</Loginbutton>
                 )
             }
-      <Typography style={{marginTop:3,width:65}}><a href="/store" style={{textDecoration:"none",color:"inherit"}}>Store</a></Typography>
-       <Typography style={{marginTop:3,width:120}}><a href="/contact" style={{textDecoration:"none",color:"inherit"}}>Contact Us</a></Typography>
-          <Contain>
+      <Typography style={{marginTop:3,width:65}}><Link to={"/store"} style={{textDecoration:"none",color:"inherit"}}>Store</Link></Typography>
+       <Typography style={{marginTop:3,width:120}}><Link to={"/contact"} style={{textDecoration:"none",color:"inherit"}}>Contact Us</Link></Typography>
+       <Link to={"/cart"} style={{textDecoration:"none",color:"inherit"}}> <Contain>
             <Badge badgeContent={cartItems?.length} color="secondary">
             <ShoppingcartIcon/>
             </Badge>
-          <a href="/cart" style={{textDecoration:"none",color:"inherit"}}>Cart</a></Contain>
+          Cart</Contain></Link>
         <LoginDialogue open={opened} setopen={setopen}/>
     </Wrapper>
   )
