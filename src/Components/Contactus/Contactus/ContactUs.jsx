@@ -6,11 +6,7 @@ import "./Contact.css";
 import swal from "sweetalert";
 // import email from "../../assests/OIP-removebg-preview.png";
 // import phone from "../../assests/phone-removebg-preview.png";
-import { HiAnnotation } from "react-icons/hi";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { HiAnnotation, HiPhoneIncoming } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const ContactUS = () => {
@@ -104,8 +100,6 @@ const ContactUS = () => {
             <div className="lower-carddesign">
               <div className="cardText">
                 <h6 className="orangeText">Drop a Mail</h6>
-                <p className="secondaryText">Lorem ipsum dolor sit amet consectetur.</p>
-                <p className="secondaryText">Lorem, ipsum dolor.</p>
               </div>
 
               <div className="sendingbutton">
@@ -163,61 +157,17 @@ const ContactUS = () => {
             transition={{
               duration: 2,
               type: "tween",
-              delay: 1.6,
-            }}
-          >
-            <div className="upper-carddesign">
-              <p className="secondaryText">Social Media</p>
-              <HiAnnotation className="design-image" size='5rem' />
-            </div>
-            <div className="lower-carddesign">
-              <div className="cardText">
-                <h6 className="orangeText">Our Accounts </h6>
-                <div className="mediaIcons-div">
-                  <div className="social-mediaIcons">
-                    <FaFacebook color="blue" size="1.1rem" />
-                    <span className="secondaryText">FaceBook</span>
-                  </div>
-                  <div className="social-mediaIcons">
-                    <FaInstagram color="blue" size="1.1rem" />
-                    <span className="secondaryText">FaceBook</span>
-                  </div>
-                  <div className="social-mediaIcons">
-                    <FaTwitter color="blue" size="1.1rem" />
-                    <span className="secondaryText">FaceBook</span>
-                  </div>
-                  <div className="social-mediaIcons">
-                    <FaYoutube color="blue" size="1.1rem" />
-                    <span className="secondaryText">FaceBook</span>
-                  </div>
-                </div>
-
-              </div>
-
-
-            </div>
-
-          </motion.div>
-          <motion.div className="carddesign"
-            initial={{ x: '7rem', opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              duration: 2,
-              type: "tween",
               delay: 2.4,
             }}
           >
             <div className="upper-carddesign">
-              <p className="secondaryText">Message Here</p>
-              <HiAnnotation className="design-image" size='5rem' />
+              <p className="secondaryText">Connect here</p>
+              <HiPhoneIncoming className="design-image" size='5rem' />
             </div>
             <div className="lower-carddesign">
               <div className="cardText">
-                <h6 className="orangeText">Drop a Mail</h6>
-                <p className="secondaryText">Lorem ipsum dolor sit amet consectetur.</p>
-
-                <p className="secondaryText">Lorem ipsum dolor sit amet consectetur.</p>
-                <p className="secondaryText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, expedita?</p>
+                <h6 className="orangeText">Make a Call</h6>
+                <p className="secondaryText" style={{fontWeight:"700"}}>Call on:- 9461696428</p>
               </div>
 
 

@@ -11,7 +11,7 @@ height:55px;
 `
 
 const Boxcomponenet = styled(Link)`
-margin-left:12%;
+margin-left:6%;
 line-height:0;
 `
 const Subheading = styled(Typography)`
@@ -54,7 +54,7 @@ const Header = () => {
  } 
 
  const list = () => (
-  <Box style={{ width: 250 }} onClick={handleclose}>
+  <Box style={{ width: 20 }} onClick={handleclose}>
       <List>
           <listItem button>
               <Customerbutton />
