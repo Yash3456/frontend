@@ -56,7 +56,7 @@ useEffect(()=>{
       </Header>
       <Container>
       <Typography>Price ({number} item)
-          <Price component="span">₹800</Price>
+          <Price component="span">₹{price}</Price>
       </Typography>
       <Typography>Discount
           <Price component="span" style={{color:"#00e676"}}>-₹{discount}</Price>
