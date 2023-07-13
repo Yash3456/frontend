@@ -54,7 +54,7 @@ const Header = () => {
  } 
 
  const list = () => (
-  <Box style={{ width: 20 }} onClick={handleclose}>
+  <Box style={{ width: 280 }} onClick={handleclose}>
       <List>
           <listItem button>
               <Customerbutton />
