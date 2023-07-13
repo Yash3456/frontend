@@ -4,12 +4,11 @@ import { Box } from '@mui/material'
 import styled from '@emotion/styled'
 
 const Container = styled(Box)`
-
 `
 
 const SearchFilter = () => {
   return (
-    <div>
+    <div style={{height:"55px"}}>
        <Container>
        <Search/> 
        </Container>
