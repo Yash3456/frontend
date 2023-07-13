@@ -8,6 +8,7 @@ import { Menu } from '@mui/icons-material';
 const Styleheader = styled(AppBar)`
 background:#2874f0;
 height:55px;
+position:absolute;
 `
 
 const Boxcomponenet = styled(Link)`
