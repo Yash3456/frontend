@@ -65,7 +65,7 @@ useEffect(()=>{
           <Price component="span">₹80</Price>
       </Typography>
       <Typography variant='h6'>Total Price
-          <Price component="span">₹{price+80}</Price>
+          <Price component="span">₹{price-discount+80}</Price>
       </Typography>
       <Typography style={{color:"#00e676"}}>Amount you Saved ₹{discount}</Typography>
       </Container>
