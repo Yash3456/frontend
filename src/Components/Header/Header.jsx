@@ -76,7 +76,7 @@ const Header = () => {
         </Drawer> 
 
         <Boxcomponenet to={"/"} style={{textDecoration:"none",color:"inherit"}}>
-         <img src={logoURL} alt="logo" style={{width:"65%"}}/>
+         <img src={logoURL} alt="logo" style={{width:"55%"}}/>
          <Box style={{display:'flex'}}>
           <Subheading>
             Explore&nbsp; 
