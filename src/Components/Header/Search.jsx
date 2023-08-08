@@ -9,17 +9,15 @@ import { Link } from 'react-router-dom';
 
 const Styledbox = styled(Box)`
 border-radius: 2px;
+margin-left: 10px;
 width: 38%;
-margin-left:-100px;
+height:60%;
 background-color: #fff;
-display: flex;
 `
+
 const Srachiconwrapper = styled(Box)`
 margin-left: auto;
-  padding: 5px;
-  display: flex;
-  color: blue;
-  flex-direction:column;
+
 `
 
 const ListWrapper = styled(List)`
@@ -27,7 +25,6 @@ color: #000;
 background: #FFFFFF;
 margin-top: 18px;
 margin-right:12px;
-position:absolute;
 border-radius:12px;
 `;
 
@@ -62,14 +59,13 @@ const Search = () => {
     onChange={(e)=>getText(e.target.value)}
     />
     <Srachiconwrapper>
-        <SearchIcon/>
-         <Box>
+         <div >
         {
               text && 
               <ListWrapper hidden={open}>
                 {
                   products.filter(product => product.title.longTitle.toLowerCase().includes(text.toLowerCase())).map(product => (
-                    <ListItem style={{position:"relative",paddingRight:"120px"}}>
+                    <ListItem style={{position:"relative",paddingRight:"12px"}}>
                       <Link 
                         to={`product/${product.id}`}
                         style={{ textDecoration:"none", color:'inherit',cursor:"pointer"}}
@@ -82,7 +78,7 @@ const Search = () => {
                 }  
               </ListWrapper>
             }
-           </Box>
+           </div>
     </Srachiconwrapper>
     </Styledbox>
   )
