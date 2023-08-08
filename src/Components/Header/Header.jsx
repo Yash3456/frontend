@@ -12,7 +12,7 @@ position:absolute;
 `
 
 const Boxcomponenet = styled(Link)`
-margin-left:6%;
+margin-left:12%;
 line-height:0;
 `
 const Subheading = styled(Typography)`
