@@ -22,7 +22,7 @@ font-style:italic;
 const Plusimage = styled('img')({
   width:10,
   height:10,
-
+  marginLeft:6
 })
 
 const Conatinerbox =styled(Box)(({theme})=>({
